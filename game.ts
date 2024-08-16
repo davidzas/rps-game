@@ -152,13 +152,11 @@ async function main(): Promise<void> {
           const computerGesture = ComputerPlayGesture();
           const playerGesture = result.name;
           const resultText = PlayRound(playerGesture, computerGesture);
-          document.getElementById(
-            "pose-result-hand"
-          )!.innerHTML = `Player: ${playerGesture} <br/>vs<br/> Computer: ${computerGesture}<br/><span class="result-text">${resultText}</span>`;
-
+          const resultContainer = document.getElementById("pose-result-hand");
+          if (resultContainer) {
+            resultContainer.innerHTML = `Player: ${playerGesture} <br/>vs<br/> Computer: ${computerGesture}<br/><span class="result-text">${resultText}</span>`;
+          }
           document.getElementById("result-container")?.classList.remove("hide");
-
-          // updateDebugInfo(est.poseData, chosenHand);
         }
       }
     }
