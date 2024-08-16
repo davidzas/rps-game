@@ -152,9 +152,9 @@ async function main(): Promise<void> {
           const computerGesture = ComputerPlayGesture();
           const playerGesture = result.name;
           const resultText = PlayRound(playerGesture, computerGesture);
-          resultLayer[
-            chosenHand as keyof ResultLayer
-          ]!.innerHTML = `Player: ${playerGesture} <br/>vs<br/> Computer: ${computerGesture}<br/><span class="result-text">${resultText}</span>`;
+          document.getElementById(
+            "pose-result-hand"
+          )!.innerHTML = `Player: ${playerGesture} <br/>vs<br/> Computer: ${computerGesture}<br/><span class="result-text">${resultText}</span>`;
 
           document.getElementById("result-container")?.classList.remove("hide");
 

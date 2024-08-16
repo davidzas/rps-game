@@ -115,7 +115,7 @@ function main() {
                         const computerGesture = ComputerPlayGesture();
                         const playerGesture = result.name;
                         const resultText = PlayRound(playerGesture, computerGesture);
-                        resultLayer[chosenHand].innerHTML = `Player: ${playerGesture} <br/>vs<br/> Computer: ${computerGesture}<br/><span class="result-text">${resultText}</span>`;
+                        document.getElementById("pose-result-hand").innerHTML = `Player: ${playerGesture} <br/>vs<br/> Computer: ${computerGesture}<br/><span class="result-text">${resultText}</span>`;
                         (_b = document.getElementById("result-container")) === null || _b === void 0 ? void 0 : _b.classList.remove("hide");
                         // updateDebugInfo(est.poseData, chosenHand);
                     }
