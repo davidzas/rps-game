@@ -54,7 +54,7 @@ async function createDetector(): Promise<any> {
   return window.handPoseDetection.createDetector(window.handPoseDetection.SupportedModels.MediaPipeHands, {
     runtime: "mediapipe",
     modelType: "full",
-    maxHands: 2,
+    maxHands: 1,
     solutionPath: `https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915`,
   });
 }
@@ -226,15 +226,6 @@ function drawPoint(ctx: CanvasRenderingContext2D, x: number, y: number, r: numbe
   ctx.arc(x, y, r, 0, 2 * Math.PI);
   ctx.fillStyle = color;
   ctx.fill();
-}
-
-function updateDebugInfo(data: any, hand: string): void {
-  // Replace 'any' with the proper type if known
-  const summaryTable = `#summary-${hand}`;
-  for (let fingerIdx in data) {
-    document.querySelector(`${summaryTable} span#curl-${fingerIdx}`)!.innerHTML = data[fingerIdx][1];
-    document.querySelector(`${summaryTable} span#dir-${fingerIdx}`)!.innerHTML = data[fingerIdx][2];
-  }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
