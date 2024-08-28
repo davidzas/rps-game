@@ -12,17 +12,17 @@ This project is a rock-paper-scissors game implemented in javascript. It allows 
 
 - Single-player mode against the computer
 - User-friendly interface
-- Score tracking
+- Gesture tracking
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
+1. Clone the repository: `git clone https://github.com/davidzas/rps-game`
 
 ## Usage
 
 1. Open the game in your browser.
-2. Choose your move (rock, paper, or scissors).
-3. See the result and the updated score.
+2. Do the move with your hand
+3. See the result.
 4. Play again!
 
 ## Contributing
