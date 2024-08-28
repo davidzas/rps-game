@@ -6,7 +6,7 @@ Thank you to [andypotato/rock-paper-scissors](https://github.com/andypotato/rock
 
 ## Description
 
-This project is a rock-paper-scissors game implemented in [insert language/framework here]. It allows users to play the classic game against the computer.
+This project is a rock-paper-scissors game implemented in javascript. It allows users to play the classic game against the computer.
 
 ## Features
 
