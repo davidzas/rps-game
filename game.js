@@ -79,7 +79,7 @@ function main() {
         // pinky: curled
         ScissorsGesture.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1.0);
         ScissorsGesture.addCurl(Finger.Pinky, FingerCurl.HalfCurl, 0.9);
-        const knownGestures = [RockGesture, PaperGesture, ScissorsGesture]; // Replace 'any' with the proper type if known
+        const knownGestures = [RockGesture, PaperGesture, ScissorsGesture];
         const GE = new fp.GestureEstimator(knownGestures);
         const detector = yield createDetector();
         console.log("mediaPose model loaded");
@@ -93,8 +93,6 @@ function main() {
             var _b;
             if (ctx && video) {
                 ctx.clearRect(0, 0, config.video.width, config.video.height);
-                // resultLayer.right!.innerText = "";
-                // resultLayer.left!.innerText = "";
                 const hands = yield detector.estimateHands(video, {
                     flipHorizontal: true,
                 });
@@ -108,7 +106,6 @@ function main() {
                     if (est.gestures.length > 0 && !isPlaying) {
                         isPlaying = true;
                         let result = est.gestures.reduce((p, c) => {
-                            // Replace 'any' with the proper type if known
                             return p.score > c.score ? p : c;
                         });
                         const chosenHand = hand.handedness.toLowerCase();
